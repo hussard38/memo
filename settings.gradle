@@ -1,0 +1,5 @@
+rootProject.name = 'memo'
+include 'application'
+include 'business'
+include 'infra'
+
