@@ -11,9 +11,15 @@ import org.junit.jupiter.api.Test;
         Assertions.assertThat(actual).isNotBlank().isEqualTo("1");
     }
      @Test
-     void fizzBuzz_checkOne_ReturnTwo(){
+     void fizzBuzz_checkTwo_ReturnTwo(){
          KataFizzBuzz kata = new KataFizzBuzzService();
          String actual = kata.fizzBuzz(2);
          Assertions.assertThat(actual).isNotBlank().isEqualTo("2");
+     }
+     @Test
+     void fizzBuzz_checkTree_ReturnFizz(){
+         KataFizzBuzz kata = new KataFizzBuzzService();
+         String actual = kata.fizzBuzz(3);
+         Assertions.assertThat(actual).isNotBlank().isEqualTo("Fizz");
      }
 }
