@@ -5,7 +5,7 @@ import org.hussard.memo.business.adapter.in.KataFizzBuzz;
 public class KataFizzBuzzService implements KataFizzBuzz {
     @Override
     public String fizzBuzz(int value) {
-        if(value == 15){
+        if((value%3) == 0 && (value % 5) == 0){
             return "FizzBuzz";
         }
         if((value%3) == 0){
