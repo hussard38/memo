@@ -40,4 +40,10 @@ import org.junit.jupiter.api.Test;
          String actual = kata.fizzBuzz(6);
          Assertions.assertThat(actual).isNotBlank().isEqualTo("Fizz");
      }
+     @Test
+     void fizzBuzz_checkFifteen_ReturnFizzBuzz(){
+         KataFizzBuzz kata = new KataFizzBuzzService();
+         String actual = kata.fizzBuzz(15);
+         Assertions.assertThat(actual).isNotBlank().isEqualTo("FizzBuzz");
+     }
 }
