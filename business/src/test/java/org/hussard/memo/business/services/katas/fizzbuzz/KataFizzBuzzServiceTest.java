@@ -22,4 +22,10 @@ import org.junit.jupiter.api.Test;
          String actual = kata.fizzBuzz(3);
          Assertions.assertThat(actual).isNotBlank().isEqualTo("Fizz");
      }
+     @Test
+     void fizzBuzz_checkFour_ReturnFour(){
+         KataFizzBuzz kata = new KataFizzBuzzService();
+         String actual = kata.fizzBuzz(4);
+         Assertions.assertThat(actual).isNotBlank().isEqualTo("4");
+     }
 }
