@@ -2,6 +2,7 @@ plugins {
     id 'org.springframework.boot' version '3.0.2'
     id 'io.spring.dependency-management' version '1.1.0'
     id 'java'
+    id("org.openapi.generator") version "6.1.0"
 }
 
 group 'org.hussard.memo.application'
@@ -21,9 +22,10 @@ ext{
     slf4jLog4='2.0.5'
 }
 dependencies {
-    implementation project(':application')
+    implementation project(':infra')
     implementation project(':business')
-
+//
+    implementation("org.springdoc:springdoc-openapi-ui:1.6.11")
     //
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-cache'
@@ -44,8 +46,20 @@ dependencies {
 
     testImplementation "org.junit.jupiter:junit-jupiter-api:${junit5}"
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junit5}"
+
+    compileJava.dependsOn tasks.openApiGenerate
 }
 
 test {
     useJUnitPlatform()
+}
+openApiGenerate {
+    generatorName.set("spring")
+    inputSpec.set(apiDirectoryPath + File.separator + "spec.yml")
+    outputDir.set("$buildDir/client")
+    configFile.set(apiDirectoryPath + File.separator + "config.json")
+    skipValidateSpec = true
+    logToStderr = true
+    generateAliasAsModel = false
+    enablePostProcessFile = false
 }

@@ -1,0 +1,10 @@
+{
+  "generateAliasAsModel": false,
+  "interfaceOnly": true,
+  "modelPackage": "org.hussard.memo.application.dto",
+  "apiPackage": "org.hussard.memo.application.api",
+  "implicitHeaders": true,
+  "hideGenerationTimestamp": true,
+  "useTags": true,
+  "documentationProvider": "none"
+}

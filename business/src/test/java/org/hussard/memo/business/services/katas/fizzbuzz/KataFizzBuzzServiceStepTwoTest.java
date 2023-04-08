@@ -28,6 +28,7 @@ class KataFizzBuzzServiceStepTwoTest {
                 Arguments.of(12 , "Fizz"),
                 Arguments.of(13 , "Fizz"),
                 Arguments.of(15 , "FizzBuzz"),
+                Arguments.of(33 , "Fizz"),
                 Arguments.of(51 , "Fizz"),
                 Arguments.of(52 , "Buzz"),
                 Arguments.of(60 , "FizzBuzz"),
