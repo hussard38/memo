@@ -1,0 +1,24 @@
+openapi: 3.0.3
+
+info:
+  title: Memo API
+  description: Ensemble de bout de code
+  contact:
+    name: hussard
+  version: 0.1.0
+tags:
+  - name: fizzbuzz
+servers:
+  - url: http://localhost:8080
+    description: Local development environment
+paths:
+  /fizzbuzz:
+    $ref: './resources/fizzbuzz_spec.yml'
+
+components:
+  parameters:
+    $ref: './parameters/_index.yaml'
+  schemas:
+    $ref: './schemas/_index.yaml'
+  responses:
+    $ref: './responses/_index.yaml'

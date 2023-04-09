@@ -1,0 +1,2 @@
+inputFizzBuzz:
+  $ref: './query/fizzbuzzInput.yaml'

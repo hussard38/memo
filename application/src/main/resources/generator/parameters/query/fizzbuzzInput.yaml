@@ -1,0 +1,7 @@
+name: inputFizzBuzz
+in: query
+description: valeur saisie
+required: true
+schema:
+  type: integer
+  format: int32

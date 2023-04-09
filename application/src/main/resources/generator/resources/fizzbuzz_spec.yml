@@ -1,0 +1,16 @@
+    get:
+      tags:
+        - fizzbuzz
+      operationId: getFizzbuzz
+      description: execute le Kata FizzBuzz.
+      parameters:
+        - $ref: '../parameters/query/fizzbuzzInput.yaml'
+      responses:
+        200:
+          description: Retour une chaine de caractere.
+          content:
+            application/json:
+              schema:
+                $ref: '../schemas/fizzbuzzDto.yaml'
+        default:
+          $ref: '../responses/UnexpectedError.yaml'

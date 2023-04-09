@@ -1,4 +1,5 @@
 {
+  "library": "spring-boot",
   "generateAliasAsModel": false,
   "interfaceOnly": true,
   "modelPackage": "org.hussard.memo.application.dto",
@@ -6,5 +7,11 @@
   "implicitHeaders": true,
   "hideGenerationTimestamp": true,
   "useTags": true,
-  "documentationProvider": "none"
+  "documentationProvider": "none",
+  "verbose": true,
+  "cleanupOutput": true,
+  "sourceFolder": "",
+  "generateModels": true,
+  "generateApis": true,
+  "openApiNullable": false
 }
