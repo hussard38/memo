@@ -72,4 +72,7 @@ openApiGenerate {
     logToStderr = true
     generateAliasAsModel = false
     enablePostProcessFile = false
+    generateApiTests = false
+    generateModelTests = false
+    modelNameSuffix = "DTO"
 }

@@ -6,12 +6,16 @@
   "apiPackage": "org.hussard.memo.application.api",
   "implicitHeaders": true,
   "hideGenerationTimestamp": true,
-  "useTags": true,
+  "useTags": false,
+  "useBeanValidation": false,
+  "serializableModel": true,
   "documentationProvider": "none",
   "verbose": true,
   "cleanupOutput": true,
+  "outputDirPreserveFiles": false,
   "sourceFolder": "",
   "generateModels": true,
   "generateApis": true,
-  "openApiNullable": false
+  "openApiNullable": false,
+  "oas3": true
 }

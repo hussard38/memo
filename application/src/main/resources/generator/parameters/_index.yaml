@@ -1,2 +1,4 @@
-inputFizzBuzz:
-  $ref: './query/fizzbuzzInput.yaml'
+fizzBuzzParam:
+  name: inputFzzBuzz
+  in: query
+  $ref: "./query/fizzbuzzInput.yaml"

@@ -1,9 +1,10 @@
-    FizzBuzzDto:
-      description: Definition du DTO FizzBuzz
-      type: object
-      properties:
-        value:
-          type: integer
-          format: int64
-        response:
-          type: string
+  type: object
+  required:
+    - value
+    - response
+  properties:
+    value:
+      type: integer
+      format: int64
+    response:
+      type: string

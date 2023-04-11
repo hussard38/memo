@@ -1,24 +1,31 @@
-openapi: 3.0.3
-
+openapi: "3.0.3"
 info:
+  version: 0.1.0
   title: Memo API
   description: Ensemble de bout de code
   contact:
     name: hussard
-  version: 0.1.0
 tags:
   - name: fizzbuzz
 servers:
   - url: http://localhost:8080
     description: Local development environment
 paths:
-  /fizzbuzz:
-    $ref: './resources/fizzbuzz_spec.yml'
+  /katas/fizzbuzz:
+    get:
+      tags:
+        - fizzbuzz
+      operationId: getFizzbuzz
+      description: Execute le Kata FizzBuzz.
+      parameters:
+        - $ref: './parameters/query/fizzbuzzInput.yaml'
+      responses:
+        200:
+          description: Retour une chaine de caractere.
+          content:
+            application/json:
+              schema:
+                $ref: './schemas/fizzbuzzDto.yaml'
+        default:
+          $ref: './responses/UnexpectedError.yaml'
 
-components:
-  parameters:
-    $ref: './parameters/_index.yaml'
-  schemas:
-    $ref: './schemas/_index.yaml'
-  responses:
-    $ref: './responses/_index.yaml'

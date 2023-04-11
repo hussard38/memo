@@ -1,5 +1,5 @@
 
-FizzBuzzDto:
-  $ref: './fizzbuzzDto.yaml'
-Error:
-  $ref: './Error.yaml'
+  FizzBuzzDto:
+    $ref: './fizzbuzzDto.yaml'
+  Error:
+    $ref: './Error.yaml'
